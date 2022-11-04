@@ -14,7 +14,7 @@ class TodoSerializer(serializers.ModelSerializer):
     return Todos.objects.create(**validated_data,user=usr)
 
 class RegistrationSerializer(serializers.ModelSerializer):
-    class Meta:
+    class Meta: 
       model=User
       fields=["first_name","last_name","username","email","password",]
     def create(self,validated_data): 
